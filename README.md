@@ -129,5 +129,3 @@ Distributed under MIT License. See `LICENSE` for details.
 
 Made with ❤️ by #TheCodeBreakers | [SRMIST](https://www.srmist.edu.in/)
 ```
-
-> **Note**: Replace placeholder links (GitHub repo, Chrome Web Store, demo GIF) with actual project links. For full Mermaid diagram support, ensure your GitHub repository has Mermaid enabled in Markdown preview.
