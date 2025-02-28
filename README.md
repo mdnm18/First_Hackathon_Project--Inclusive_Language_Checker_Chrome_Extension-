@@ -4,16 +4,16 @@
 
 ```markdown
 # 🌐 Inclusive Language Checker Chrome Extension 
-**Promote Gender-Neutral Communication with Real-Time AI-Powered Suggestions**
+Promote Gender-Neutral Communication with Real-Time AI-Powered Suggestions
 
 ## 🚀 Features
 | Feature                      | Description                                                                 |
 |------------------------------|-----------------------------------------------------------------------------|
-| 🔄 **Real-Time Processing**  | Scans webpages/documents instantly for gendered terms                      |
-| 🎯 **Dual Modes**            | Toggle between *Highlight* or *Auto-Replace* modes                         |
-| 📊 **Live Analytics**        | Track daily/total inclusive changes via dashboard                          |
-| ⚙️ **Custom Dictionary**     | Add/remove terms (e.g., "fireman" → "firefighter")                         |
-| 🌈 **Dark Mode**             | Eye-friendly UI with smooth transitions                                    |
+| 🔄   Real-Time Processing    | Scans webpages/documents instantly for gendered terms                      |
+| 🎯   Dual Modes              | Toggle between *Highlight* or *Auto-Replace* modes                         |
+| 📊   Live Analytics          | Track daily/total inclusive changes via dashboard                          |
+| ⚙️   Custom Dictionary       | Add/remove terms (e.g., "fireman" → "firefighter")                         |
+| 🌈   Dark Mode               | Eye-friendly UI with smooth transitions                                    |
 
 ---
 
