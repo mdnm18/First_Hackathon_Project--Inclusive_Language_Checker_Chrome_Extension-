@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusive Language Checker</title>
+    <!-- Add meta description for SEO -->
+    <meta name="description"
+        content="Check and improve your content with our Inclusive Language Checker. Automatically identifies and replaces gendered terms for more inclusive communication.">
+    <!-- Add keywords meta tag for SEO -->
+    <meta name="keywords" content="inclusive language, gender-neutral, language checker, accessibility, diversity">
+    <!-- Add canonical URL -->
+    <meta name="robots" content="index, follow">
+    <!-- External resources -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                <span>Inclusive Language</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Dictionary</a>
+                <a href="#" class="nav-link">Help</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Page Title -->
+        <h1>Inclusive Language Checker</h1>
+
+        <!-- Statistics Section -->
+        <section class="stats">
+            <div class="stat-box" data-tooltip="Terms replaced today">
+                <span id="termsReplaced">0</span>
+                <p>Today's Changes</p>
+            </div>
+            <div class="stat-box" data-tooltip="Total changes made">
+                <span id="totalReplaced">0</span>
+                <p>Total Impact</p>
+            </div>
+        </section>
+
+        <!-- Options Section -->
+        <section class="options">
+            <div class="toggle-container">
+                <label for="autoReplace" class="toggle">
+                    <input type="checkbox" id="autoReplace">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">.</span>
+                </label>
+                <span class="toggle-label">Auto-replace gendered terms</span>
+            </div>
+
+            <div class="toggle-container">
+                <label for="highlightOnly" class="toggle">
+                    <input type="checkbox" id="highlightOnly">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">.</span>
+                </label>
+                <span class="toggle-label">Highlight only (no auto-replace)</span>
+            </div>
+
+            <div class="toggle-container">
+                <label for="showNotifications" class="toggle">
+                    <input type="checkbox" id="showNotifications" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">.</span>
+                </label>
+                <span class="toggle-label">Show notifications</span>
+            </div>
+        </section>
+
+        <!-- Text Checker Section -->
+        <section class="manual-check">
+            <h2>Check Your Text</h2>
+            <textarea id="textInput" placeholder="Type or paste text to check for gendered language..."
+                aria-label="Input text to check"></textarea>
+            <div class="loading-spinner" id="loadingSpinner"></div>
+            <button id="checkButton"><i class="fas fa-check-circle" aria-hidden="true"></i> Check Text</button>
+            <button id="copyButton" aria-label="Copy result" style="display: none;"><i class="fas fa-copy"
+                    aria-hidden="true"></i> Copy Result</button>
+            <div id="results" aria-live="polite"></div>
+        </section>
+
+        <!-- Dictionary Section (hidden by default) -->
+        <section id="dictionarySection" style="display: none;">
+            <h2>Custom Terms</h2>
+            <div class="dictionary-input">
+                <input type="text" id="termInput" placeholder="Gendered term..." aria-label="Enter gendered term">
+                <input type="text" id="replacementInput" placeholder="Inclusive replacement..."
+                    aria-label="Enter inclusive replacement">
+                <button id="addTermButton" aria-label="Add custom term"><i class="fas fa-plus"
+                        aria-hidden="true"></i></button>
+            </div>
+            <div id="customTermsList" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-wrapper">
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-buttons">
+                    <button id="resetStats" class="footer-btn"><i class="fas fa-redo" aria-hidden="true"></i> Reset
+                        Stats</button>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#" class="footer-link" id="toggleDictionary">
+                    <i class="fas fa-book" aria-hidden="true"></i> Custom Terms
+                </a>
+                <a href="#" class="footer-link" id="exportData">
+                    <i class="fas fa-file-export" aria-hidden="true"></i> Export
+                </a>
+                <a href="#" class="footer-link" id="importData">
+                    <i class="fas fa-file-import" aria-hidden="true"></i> Import
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Inclusive Language Checker | Made with <i class="fas fa-heart" aria-hidden="true"
+                        style="color: var(--danger);"></i> for a more inclusive world</p>
+                <p>Experience quality and innovation with Mondal Products</p>
+                <p>&copy; 2025 Copyright. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Element -->
+    <div id="notification" class="notification" aria-live="assertive"></div>
+
+    <!-- Scripts -->
+    <script src="popup.js"></script>
+</body>
+
+</html>
