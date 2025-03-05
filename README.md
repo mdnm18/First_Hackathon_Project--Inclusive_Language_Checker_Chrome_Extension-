@@ -129,3 +129,88 @@ Distributed under MIT License. See `LICENSE` for details.
 
 Made with ❤️ by #TheCodeBreakers | [SRMIST](https://www.srmist.edu.in/)
 ```
+
+
+
+classDiagram
+    class Voter {
+        - voterID : int
+        - name : string
+        - address : string
+        - nationalID : string
+        - hasVoted : boolean
+        + register() : void
+        + authenticate(nationalID: string) : boolean
+        + castVote(candidate: Candidate) : void
+        + getVoterID() : int
+        + getName() : string
+        + setHasVoted(hasVoted: boolean) : void
+        + getHasVoted(): boolean
+    }
+
+    class Candidate {
+        - candidateID : int
+        - name : string
+        - party : string
+        - symbol : string
+        - voteCount : int
+        + getCandidateID() : int
+        + getName() : string
+        + getParty() : string
+        + getSymbol() : string
+        + incrementVoteCount() : void
+        + getVoteCount() : int
+    }
+
+    class Election {
+        - electionID : int
+        - electionName : string
+        - startDate : Date
+        - endDate : Date
+        - status : string
+        + startElection() : void
+        + endElection() : void
+        + getElectionID() : int
+        + getElectionName() : string
+        + getStatus() : string
+        + addCandidate(candidate: Candidate) : void
+        + getCandidates() : List~Candidate~
+        + getStartDate() : Date
+        + getEndDate() : Date
+        + setStatus(status: string) : void
+    }
+
+    class VotingSystem {
+        - voters : List~Voter~
+        - candidates : List~Candidate~
+        - elections : List~Election~
+        + registerVoter(voter: Voter) : void
+        + authenticateVoter(nationalID: string) : Voter
+        + addCandidate(candidate: Candidate) : void
+        + startElection(election: Election) : void
+        + endElection(election: Election) : void
+        + castVote(voterID: int, candidateID: int) : boolean
+        + getElectionResults(electionID: int) : Map~Candidate, int~
+        + createElection(election: Election) : void
+        + getElection(electionID: int) : Election
+        + getVoter(voterID: int) : Voter
+        + getCandidate(candidateID: int) : Candidate
+    }
+
+    class Administrator {
+        - adminID : int
+        - username : string
+        - password : string
+        + login(username: string, password: string) : boolean
+        + manageElections(election: Election) : void
+        + manageCandidates(candidate: Candidate) : void
+        + manageVoters(voter: Voter) : void
+    }
+
+    VotingSystem "1" -- "*" Voter : manages
+    VotingSystem "1" -- "*" Candidate : manages
+    VotingSystem "1" -- "*" Election : manages
+    Election "1" -- "*" Candidate : has
+    Voter "1" -- "1" Election : votes in
+    Administrator "1" -- "1" VotingSystem : manages
+
